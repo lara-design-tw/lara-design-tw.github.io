@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- mark JS-capable before first paint (drives progressive scroll-reveal);
+       failsafe reveals everything if app.js never initialises -->
+  <script>
+    document.documentElement.classList.add('js');
+    addEventListener('load', function () {
+      setTimeout(function () {
+        if (!window.__laraReveal) {
+          document.querySelectorAll('.rv').forEach(function (e) { e.classList.add('in'); });
+        }
+      }, 1500);
+    });
+  </script>
+
+  <title>菈菈網頁設計 | 網頁設計・客製化系統・LINE 官帳設計</title>
+  <meta name="description" content="菈菈網頁設計位於高雄，提供官網建置、自助後台、客製化系統與 LINE 官帳設計。規格書報價、範圍內不追加，上線後提供持續維護。" />
+  <meta name="keywords" content="菈菈網頁設計, 高雄網頁設計, 網站製作, 一頁式網站, 形象官網, 客製化系統, LINE官方帳號設計, 網站維護" />
+  <meta name="author" content="菈菈網頁設計" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lara-design.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lara-design.com/" />
+  <meta property="og:title" content="菈菈網頁設計 | 網頁設計" />
+  <meta property="og:description" content="官網建置、自助後台、LINE 官帳設計。規格書報價，範圍內不追加，上線後提供持續維護。" />
+  <meta property="og:locale" content="zh_TW" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "菈菈網頁設計",
+    "description": "網頁設計工作室：官網建置、客製化系統開發、LINE 官帳設計、網站維護",
+    "url": "https://lara-design.com/",
+    "address": { "@type": "PostalAddress", "addressLocality": "高雄市", "addressRegion": "三民區", "addressCountry": "TW" },
+    "serviceType": ["網頁設計", "一頁式網站", "形象官網", "客製化系統開發", "LINE 官方帳號設計", "網站維護"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="assets/styles.css?v=5" rel="stylesheet" />
+</head>
+<body>
+<div id="app" v-cloak>
+
+  <!-- ═════════════ NAV ═════════════ -->
+  <nav class="nav" aria-label="主要導覽">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="brand">菈菈網頁設計<span class="seal-dot"></span></a>
+      <div class="nav-links">
+        <a href="#services" class="nav-a">服務範疇</a>
+        <a href="#estimator" class="nav-a">報價試算</a>
+        <a href="#plans" class="nav-a">方案價格</a>
+        <a href="works.html" class="nav-a">作品集</a>
+        <a href="faq.html" class="nav-a">常見問題</a>
+        <a href="#contact" class="nav-cta">免費洽詢</a>
+      </div>
+      <button class="burger" aria-expanded="false" aria-label="選單"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mnav">
+    <a href="#services">服務範疇</a>
+    <a href="#estimator">報價試算</a>
+    <a href="#plans">方案價格</a>
+    <a href="works.html">作品集</a>
+    <a href="faq.html">常見問題</a>
+    <a href="#contact" class="nav-cta">免費洽詢</a>
+  </div>
+
+  <main>
+
+    <!-- ═════════════ HERO ═════════════ -->
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div class="rv">
+          <span class="eyebrow hero-eye">高雄 · 網頁設計工作室</span>
+          <h1 class="hero-h1">為你的事業<br />蓋上值得信任的<br /><span class="em">數位印記</span></h1>
+          <p class="hero-p">官網建置、客製化系統與 LINE 官帳設計，從商業目標出發，兼顧質感、能見度與長期維護。</p>
+          <div class="hero-cta">
+            <a href="#estimator" class="btn btn-fill">線上報價試算 <span class="arr">→</span></a>
+            <a href="#plans" class="btn btn-out">服務方案</a>
+          </div>
+        </div>
+
+        <div class="rv d2">
+          <div class="geo-stage" aria-hidden="true">
+            <svg class="geo-svg" viewBox="0 0 360 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="菈菈設計 品牌圖形">
+              <!-- baseline grid -->
+              <g stroke="#16140E" stroke-opacity="0.10" stroke-width="1">
+                <line x1="64" y1="16" x2="64" y2="384" />
+                <line x1="300" y1="16" x2="300" y2="384" />
+                <line x1="16" y1="94" x2="344" y2="94" />
+                <line x1="16" y1="300" x2="344" y2="300" />
+              </g>
+              <!-- large ink ring (structure) -->
+              <circle class="geo-ring" cx="158" cy="196" r="113" fill="none" stroke="#16140E" stroke-width="1.6" />
+              <!-- thin concentric vermilion ring -->
+              <circle cx="158" cy="196" r="62" fill="none" stroke="#D6452F" stroke-width="1.4" />
+              <!-- solid vermilion disc (focal weight) -->
+              <circle class="geo-disc" cx="236" cy="240" r="84" fill="#D6452F" />
+              <!-- offset registration outline = print "套版" motif -->
+              <circle class="geo-reg" cx="222" cy="226" r="84" fill="none" stroke="#16140E" stroke-width="1.5" stroke-opacity="0.9" />
+              <!-- registration centre dot -->
+              <circle cx="158" cy="196" r="4.5" fill="#16140E" />
+              <!-- precise accent diamond on a grid node -->
+              <rect x="295.5" y="89.5" width="9" height="9" fill="#D6452F" transform="rotate(45 300 94)" />
+            </svg>
+            <span class="geo-tag">LARA DESIGN STUDIO</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ═════════════ TRUST STRIP ═════════════ -->
+    <section class="trust" aria-label="服務承諾">
+      <div class="wrap trust-row">
+        <div class="trust-cell rv">
+          <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <span>規格書報價，範圍內不追加</span>
+        </div>
+        <div class="trust-cell rv d1">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+          <span>兩個工作天內回覆</span>
+        </div>
+        <div class="trust-cell rv d2">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>上線後提供持續維護</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ PAIN ═════════════ -->
+    <section class="sec sec-dark" aria-label="常見課題">
+      <div class="wrap">
+        <h2 class="sec-title rv pain-head">許多生意，<span style="color:var(--zhu-ink);font-style:italic">輸在看不見的地方</span></h2>
+        <div class="pain-list">
+          <div class="pain-item rv">
+            <span class="pain-n">01</span>
+            <div class="pain-body">
+              <div class="pain-q">搜尋能見度不足</div>
+              <p class="pain-a">網站缺乏正確的 SEO 結構，潛在客戶搜尋相關服務時無法觸及。<b>我們在建置階段即納入 SEO 規劃，確保網站具備被搜尋的基礎。</b></p>
+            </div>
+          </div>
+          <div class="pain-item rv">
+            <span class="pain-n">02</span>
+            <div class="pain-body">
+              <div class="pain-q">重複性溝通成本過高</div>
+              <p class="pain-a">營業資訊、價目與常見問題佔據大量人力。<b>透過網站資訊架構與 LINE 官帳自動回覆，把重複詢問系統化處理。</b></p>
+            </div>
+          </div>
+          <div class="pain-item rv">
+            <span class="pain-n">03</span>
+            <div class="pain-body">
+              <div class="pain-q">網站維運受制於廠商</div>
+              <p class="pain-a">內容更新依賴外部廠商，時程與成本難以掌控。<b>我們交付自助管理後台與完整操作文件，內容主導權回到你手上。</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ SERVICES ═════════════ -->
+    <section id="services" class="sec" aria-labelledby="h-svc">
+      <div class="wrap">
+        <div class="svc-head rv">
+          <div>
+            <span class="eyebrow">服務範疇</span>
+            <h2 id="h-svc" class="sec-title">從一頁官網，<br />到量身打造的系統</h2>
+          </div>
+          <span class="idx">06 項服務</span>
+        </div>
+
+        <div class="svc-list">
+          <a v-for="(s,i) in services" :key="s.t" class="svc-row rv" :href="s.href">
+            <span class="svc-n">{{ String(i+1).padStart(2,'0') }}</span>
+            <span class="svc-name"><span v-html="s.icon"></span>{{ s.t }}</span>
+            <span class="svc-desc">{{ s.d }}</span>
+            <span class="svc-tag">{{ s.tag }}</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ ESTIMATOR ═════════════ -->
+    <section id="estimator" class="sec sec-tint" aria-labelledby="h-est">
+      <div class="wrap">
+        <div class="rv" style="margin-bottom:2.6rem">
+          <h2 id="h-est" class="sec-title">先算個概念，<br />再決定要不要聊</h2>
+          <p class="sec-lead">選擇所需的網站類型與功能，即時取得初步估算，作為洽詢前的預算參考。</p>
+        </div>
+
+        <div class="est rv">
+          <div class="est-l">
+            <div class="est-group">
+              <span class="est-step">Step 1　選擇網站類型</span>
+              <div v-for="t in estTypes" :key="t.name" class="est-type" :class="{on: est.type===t.name}"
+                   @click="est.type=t.name" role="radio" :aria-checked="est.type===t.name" tabindex="0"
+                   @keydown.enter="est.type=t.name" @keydown.space.prevent="est.type=t.name">
+                <span class="est-radio" aria-hidden="true"></span>
+                <div>
+                  <span class="nm">{{ t.name }}</span>
+                  <span class="ht">{{ t.hint }}</span>
+                </div>
+                <span class="pr">NT$ {{ t.price.toLocaleString() }} 起</span>
+              </div>
+            </div>
+            <div class="est-group">
+              <span class="est-step">Step 2　加選功能（可複選）</span>
+              <div class="est-chips">
+                <span v-for="a in estAddons" :key="a.name" class="est-chip" :class="{on: est.addons.includes(a.name)}"
+                      @click="toggleAddon(a.name)" role="checkbox" :aria-checked="est.addons.includes(a.name)" tabindex="0"
+                      @keydown.enter="toggleAddon(a.name)" @keydown.space.prevent="toggleAddon(a.name)">
+                  {{ a.name }} <span class="pl">+{{ a.price/1000 }}k</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="est-r">
+            <span class="est-rlabel">估算結果</span>
+            <div class="est-price"><span class="cur">NT$</span>{{ estTotal.toLocaleString() }}</div>
+            <span class="est-qi">起 · 實際金額依規格書確認</span>
+            <div class="est-items">
+              <div class="est-line">
+                <span>{{ est.type }}</span>
+                <span class="v">{{ currentTypePrice.toLocaleString() }}</span>
+              </div>
+              <div v-for="a in selectedAddons" :key="a.name" class="est-line">
+                <span>{{ a.name }}</span>
+                <span class="v">+{{ a.price.toLocaleString() }}</span>
+              </div>
+            </div>
+            <p class="est-note">本估算為起始金額，僅供預算參考。實際報價將於需求確認後，以書面規格書載明；規格範圍內不另行追加費用。</p>
+            <button class="btn btn-zhu" style="width:100%;justify-content:center" @click="sendEstimate">以此試算內容洽詢 <span class="arr">→</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ PROCESS ═════════════ -->
+    <section id="process" class="sec" aria-labelledby="h-flow">
+      <div class="wrap">
+        <div class="rv" style="margin-bottom:2.8rem">
+          <h2 id="h-flow" class="sec-title">合作流程</h2>
+          <p class="sec-lead">四個階段，每一階段皆有明確的交付項目與確認節點。</p>
+        </div>
+        <div class="flow">
+          <div class="flow-step rv">
+            <div class="flow-n">01</div>
+            <div class="flow-t">需求訪談</div>
+            <p class="flow-d">了解營運模式、目標客群與預算範圍。此階段不收費，雙方確認方向後再進入報價。</p>
+          </div>
+          <div class="flow-step rv d1">
+            <div class="flow-n">02</div>
+            <div class="flow-t">報價與規格確認</div>
+            <p class="flow-d">以書面規格書載明工作項目、金額與交付時程。規格範圍內不另行追加費用。</p>
+          </div>
+          <div class="flow-step rv d2">
+            <div class="flow-n">03</div>
+            <div class="flow-t">設計與開發</div>
+            <p class="flow-d">開發期間提供預覽連結，進度透明，並於各階段安排確認與修改節點。</p>
+          </div>
+          <div class="flow-step rv d3">
+            <div class="flow-n">04</div>
+            <div class="flow-t">交付與維護</div>
+            <p class="flow-d">正式上線後提供操作教學與文件。後續可選擇維護方案，由我們持續照管系統。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ PRICING ═════════════ -->
+    <section id="plans" class="sec sec-tint" aria-labelledby="h-plan">
+      <div class="wrap">
+        <div class="rv" style="margin-bottom:2.8rem">
+          <h2 id="h-plan" class="sec-title">服務方案</h2>
+          <p class="sec-lead">以下皆為起始報價，實際費用依專案範圍確認後調整。不確定適合哪個方案，歡迎直接洽詢。</p>
+        </div>
+        <div class="pgrid rv">
+          <div v-for="(p,i) in plans" :key="p.name" class="pcard" :class="{feat:i===1}">
+            <div class="pc-name">{{ p.name }}</div>
+            <div class="pc-for">{{ p.for }}</div>
+            <div class="pc-price"><span class="cur">NT$</span>{{ p.price }}</div>
+            <div class="pc-unit">{{ p.unit }}</div>
+            <hr class="pc-hr" />
+            <div class="pc-feats">
+              <div v-for="f in p.feats" :key="f" class="pc-feat">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{{ f }}
+              </div>
+            </div>
+            <a href="#contact" class="pc-btn" @click="form.service = p.formService">洽詢此方案</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ CONTACT ═════════════ -->
+    <section id="contact" class="sec" aria-labelledby="h-ct">
+      <div class="wrap ct-grid">
+        <div class="rv">
+          <span class="eyebrow">聯絡我們</span>
+          <h2 id="h-ct" class="ct-h">開始你的專案，<br />從一次<span class="em">需求訪談</span>開始</h2>
+          <p class="ct-sub">不論專案規模，歡迎說明需求。我們將於兩個工作天內回覆。</p>
+
+          <div class="ct-item">
+            <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="ct-label">Email</div><div class="ct-val"><a href="mailto:laradesign.tw@gmail.com">laradesign.tw@gmail.com</a></div></div>
+          </div>
+          <div class="ct-item">
+            <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div><div class="ct-label">LINE</div><div class="ct-val"><a href="https://line.me/R/ti/p/@223qfxaj" target="_blank" rel="noopener">@223qfxaj</a></div></div>
+          </div>
+          <div class="ct-item">
+            <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="ct-label">地點</div><div class="ct-val">高雄市三民區</div></div>
+          </div>
+        </div>
+
+        <div class="rv d1">
+          <div class="form">
+            <div v-if="!formSent">
+              <div class="fgrid">
+                <div class="fb">
+                  <label class="f-label" for="fn">姓名</label>
+                  <input id="fn" class="f-in" type="text" placeholder="王小明" v-model="form.name" />
+                </div>
+                <div class="fb">
+                  <label class="f-label" for="fe">Email</label>
+                  <input id="fe" class="f-in" type="email" placeholder="hello@example.com" v-model="form.email" />
+                </div>
+                <div class="fb full">
+                  <label class="f-label" for="fs">你需要什麼服務？</label>
+                  <select id="fs" class="f-sel" v-model="form.service">
+                    <option value="" disabled>請選擇服務類型</option>
+                    <option>網站 + 自助後台管理系統</option>
+                    <option>品牌官網 / 一頁式</option>
+                    <option>App 開發</option>
+                    <option>電商系統</option>
+                    <option>UI/UX 設計</option>
+                    <option>系統整合</option>
+                    <option>維護 &amp; 顧問</option>
+                    <option>其他 / 不確定</option>
+                  </select>
+                </div>
+                <div class="fb full">
+                  <label class="f-label" for="fm">說說你的需求</label>
+                  <textarea id="fm" class="f-ta" placeholder="請簡述專案需求或想法，我們會在訪談時進一步討論細節。" v-model="form.message"></textarea>
+                </div>
+                <div class="fb full">
+                  <p v-if="formError" class="f-err">{{ formError }}</p>
+                  <button class="f-send" @click="submitForm" :disabled="sending">{{ sending ? '送出中…' : '送出需求' }}</button>
+                </div>
+              </div>
+            </div>
+            <div v-else class="f-ok">
+              <div class="seal-ok">菈</div>
+              <h4>已收到您的需求</h4>
+              <p>感謝您的來信，我們將於兩個工作天內回覆。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═════════════ FOOTER ═════════════ -->
+  <footer class="foot" aria-label="頁尾">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand-col">
+          <div class="foot-brand">菈菈網頁設計<span class="seal-dot"></span></div>
+          <p class="foot-blurb">官網建置、客製化系統、LINE 官帳設計，讓每個數位工具都替你帶來生意。</p>
+        </div>
+        <div>
+          <div class="foot-h">快速前往</div>
+          <a href="#services" class="foot-a">服務範疇</a>
+          <a href="#estimator" class="foot-a">報價試算</a>
+          <a href="#plans" class="foot-a">方案價格</a>
+          <a href="works.html" class="foot-a">作品集</a>
+          <a href="faq.html" class="foot-a">常見問題</a>
+        </div>
+        <div>
+          <div class="foot-h">聯絡</div>
+          <a href="mailto:laradesign.tw@gmail.com" class="foot-a">Email</a>
+          <a href="https://line.me/R/ti/p/@223qfxaj" target="_blank" rel="noopener" class="foot-a">LINE</a>
+        </div>
+      </div>
+      <div class="foot-line">
+        <span class="foot-copy">&copy; 2026 菈菈網頁設計 Lara Design. All rights reserved.</span>
+        <span class="foot-copy">Sanmin Dist., Kaohsiung</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+<script src="assets/app.js?v=3"></script>
+<script>
+const { createApp, ref, computed, onMounted, nextTick } = Vue;
+createApp({
+  setup() {
+    const services = [
+      { t:'品牌官網 / 一頁式', tag:'最快 1 週交付', href:'#estimator',
+        d:'以單一頁面完整呈現品牌定位、服務內容與聯絡方式，適合初次建立線上形象的品牌。',
+        icon:'<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>' },
+      { t:'網站＋自助後台', tag:'自主內容管理', href:'#estimator',
+        d:'網站搭配內容管理後台，文字、圖片與商品皆可自行更新，降低長期維運成本。',
+        icon:'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="12" y1="9" x2="18" y2="9"/></svg>' },
+      { t:'電商系統', tag:'完整銷售流程', href:'#contact',
+        d:'涵蓋商品管理、購物車流程與綠界／藍新金流串接，建立完整的線上銷售通路。',
+        icon:'<svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 7H6"/></svg>' },
+      { t:'客製化系統開發', tag:'依需求報價', href:'#contact',
+        d:'預約系統、會員平台、進銷存後台。當現成軟體無法貼合營運流程，我們依需求量身開發。',
+        icon:'<svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>' },
+      { t:'LINE 官帳設計', tag:'NT$3,000 起', href:'#contact',
+        d:'圖文選單、歡迎訊息與關鍵字自動回覆完整建置，將顧客服務流程系統化。',
+        icon:'<svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.3 9 9 0 0 1-3.8-.8L3 21l2-4.7a8.1 8.1 0 0 1-1.5-4.8A8.38 8.38 0 0 1 12 3.2a8.38 8.38 0 0 1 9 8.3z"/></svg>' },
+      { t:'維護＆顧問', tag:'NT$2,000 / 月起', href:'#plans',
+        d:'系統更新、定期備份、問題排查與小幅調整，確保網站長期穩定運作。',
+        icon:'<svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>' },
+    ];
+
+    const estTypes = [
+      { name:'一頁式官網', hint:'單頁式架構，交付週期最短', price:8000 },
+      { name:'形象官網（多頁）', hint:'五頁內，完整品牌與服務架構', price:20000 },
+      { name:'網站＋自助後台', hint:'含內容管理後台，可自主更新', price:25000 },
+    ];
+    const estAddons = [
+      { name:'LINE 官帳設計', price:3000 },
+      { name:'線上預約功能', price:5000 },
+      { name:'SEO 強化', price:3000 },
+      { name:'部落格 / 文章系統', price:3000 },
+      { name:'多語系（中英）', price:4000 },
+      { name:'首年維護（年繳優惠）', price:20000 },
+    ];
+    const est = ref({ type:'一頁式官網', addons:[] });
+    const currentTypePrice = computed(() => estTypes.find(t => t.name === est.value.type)?.price ?? 0);
+    const selectedAddons = computed(() => estAddons.filter(a => est.value.addons.includes(a.name)));
+    const estTotal = computed(() => currentTypePrice.value + selectedAddons.value.reduce((s,a)=>s+a.price,0));
+    function toggleAddon(name){ const i = est.value.addons.indexOf(name); if(i>-1) est.value.addons.splice(i,1); else est.value.addons.push(name); }
+    function sendEstimate(){
+      const addonText = selectedAddons.value.length ? '，加購：' + selectedAddons.value.map(a=>a.name).join('、') : '';
+      form.value.service = est.value.type.includes('後台') ? '網站 + 自助後台管理系統' : '品牌官網 / 一頁式';
+      form.value.message = `您好，我透過報價試算器初步估算：${est.value.type}${addonText}，估算約 NT$ ${estTotal.value.toLocaleString()} 起。希望進一步洽詢，再麻煩與我聯繫，謝謝。`;
+      document.querySelector('#contact').scrollIntoView({ behavior:'smooth' });
+    }
+
+    const plans = [
+      { name:'一頁式官網', for:'適合初次建立線上形象的品牌', price:'5,000', unit:'起，依功能需求調整', formService:'品牌官網 / 一頁式',
+        feats:['Hero＋關於＋服務＋聯絡版面','RWD 響應式，手機完整瀏覽','SEO Meta 標題／描述設定','聯絡表單／LINE 串接'] },
+      { name:'形象官網', for:'適合需要完整品牌呈現的企業', price:'20,000', unit:'起，依頁面數與功能調整', formService:'品牌官網 / 一頁式',
+        feats:['多頁面設計（5 頁內）','客製化視覺與動態效果','GA＋Search Console 設定','SEO Meta 全站設定','表單／LINE／地圖串接'] },
+      { name:'LINE 官帳設計', for:'適合需要系統化客服流程的店家', price:'3,000', unit:'起，依回覆組數與設計調整', formService:'其他 / 不確定',
+        feats:['圖文選單客製設計','加好友歡迎訊息','關鍵字自動回覆（5 組內）','操作說明文件交付'] },
+      { name:'系統維護月費', for:'適合重視長期穩定營運的客戶', price:'2,000', unit:'／月起，依服務範圍調整', formService:'維護 & 顧問',
+        feats:['系統／外掛定期更新','每月備份管理','問題排查優先處理','小功能調整'] },
+    ];
+
+    const form = ref({ name:'', email:'', service:'', message:'' });
+    const formSent = ref(false), sending = ref(false), formError = ref('');
+    async function submitForm(){
+      if(!form.value.name || !form.value.email){ formError.value='請填寫姓名與 Email'; return; }
+      sending.value = true; formError.value='';
+      try{
+        const res = await fetch('https://formsubmit.co/ajax/laradesign.tw@gmail.com', {
+          method:'POST', headers:{ 'Content-Type':'application/json', 'Accept':'application/json' },
+          body: JSON.stringify({
+            '姓名':form.value.name, 'Email':form.value.email,
+            '服務類型':form.value.service||'未選擇', '需求說明':form.value.message||'（未填寫）',
+            _subject:'【菈菈網頁設計】新的網站洽詢 - '+form.value.name, _template:'table', _captcha:'false',
+          }),
+        });
+        if(!res.ok) throw new Error('send failed');
+        formSent.value = true;
+      } catch(e){ formError.value='送出失敗，請稍後再試，或直接來信 laradesign.tw@gmail.com'; }
+      finally{ sending.value = false; }
+    }
+
+    onMounted(() => { nextTick(() => { if (window.__laraReveal) window.__laraReveal(); }); });
+
+    return { services, estTypes, estAddons, est, currentTypePrice, selectedAddons, estTotal, toggleAddon, sendEstimate, plans, form, formSent, sending, formError, submitForm };
+  },
+}).mount('#app');
+</script>
+</body>
+</html>

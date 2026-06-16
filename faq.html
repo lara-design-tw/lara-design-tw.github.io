@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script>
+    document.documentElement.classList.add('js');
+    addEventListener('load', function () {
+      setTimeout(function () {
+        if (!window.__laraReveal) {
+          document.querySelectorAll('.rv').forEach(function (e) { e.classList.add('in'); });
+        }
+      }, 1500);
+    });
+  </script>
+
+  <title>常見問題 | 菈菈網頁設計 — 高雄網頁設計・客製化系統</title>
+  <meta name="description" content="關於網站製作時程、報價方式、付款流程、後續維護的常見問題。菈菈網頁設計，高雄網頁設計工作室。" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lara-design.com/faq.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="常見問題 | 菈菈網頁設計" />
+  <meta property="og:description" content="網站製作時程、報價方式、付款流程與後續維護的常見問題。" />
+  <meta property="og:locale" content="zh_TW" />
+
+  <script type="application/ld+json" id="faq-jsonld"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="assets/styles.css?v=5" rel="stylesheet" />
+</head>
+<body>
+<div id="app" v-cloak>
+
+  <nav class="nav" aria-label="主要導覽">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="brand">菈菈網頁設計<span class="seal-dot"></span></a>
+      <div class="nav-links">
+        <a href="index.html#services" class="nav-a">服務範疇</a>
+        <a href="index.html#estimator" class="nav-a">報價試算</a>
+        <a href="index.html#plans" class="nav-a">方案價格</a>
+        <a href="works.html" class="nav-a">作品集</a>
+        <a href="faq.html" class="nav-a cur">常見問題</a>
+        <a href="index.html#contact" class="nav-cta">免費洽詢</a>
+      </div>
+      <button class="burger" aria-expanded="false" aria-label="選單"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mnav">
+    <a href="index.html#services">服務範疇</a>
+    <a href="index.html#estimator">報價試算</a>
+    <a href="index.html#plans">方案價格</a>
+    <a href="works.html">作品集</a>
+    <a href="faq.html">常見問題</a>
+    <a href="index.html#contact" class="nav-cta">免費洽詢</a>
+  </div>
+
+  <main>
+    <header class="page-hero">
+      <div class="wrap">
+        <span class="eyebrow">常見問題</span>
+        <h1 class="page-h1">合作之前，<br /><span class="em">先解答你的疑問</span></h1>
+        <p class="page-sub">關於時程、報價、付款與後續維護的常見問題都整理在這裡。沒列到的問題，歡迎直接洽詢。</p>
+      </div>
+    </header>
+
+    <section class="sec" style="padding-top:1.5rem" aria-label="常見問題列表">
+      <div class="wrap">
+        <div class="faq-wrap">
+          <div v-for="(f,i) in faqs" :key="f.q" class="faq rv in" :class="{open: open===i}">
+            <button class="faq-q" @click="open = open===i ? -1 : i" :aria-expanded="(open===i).toString()">
+              {{ f.q }}
+              <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+            </button>
+            <div class="faq-a"><div class="faq-a-in">{{ f.a }}</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec-dark cta-band">
+      <div class="wrap">
+        <h2 class="rv">還有其他問題？<span class="em">直接問最快</span></h2>
+        <p class="rv d1">兩個工作天內回覆，需求訪談不收費。</p>
+        <a href="index.html#contact" class="btn btn-zhu rv d2">前往洽詢 <span class="arr">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot" aria-label="頁尾">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand-col">
+          <div class="foot-brand">菈菈網頁設計<span class="seal-dot"></span></div>
+          <p class="foot-blurb">官網建置、客製化系統、LINE 官帳設計，讓每個數位工具都替你帶來生意。</p>
+        </div>
+        <div>
+          <div class="foot-h">快速前往</div>
+          <a href="index.html#services" class="foot-a">服務範疇</a>
+          <a href="index.html#estimator" class="foot-a">報價試算</a>
+          <a href="index.html#plans" class="foot-a">方案價格</a>
+          <a href="works.html" class="foot-a">作品集</a>
+          <a href="faq.html" class="foot-a">常見問題</a>
+        </div>
+        <div>
+          <div class="foot-h">聯絡</div>
+          <a href="mailto:laradesign.tw@gmail.com" class="foot-a">Email</a>
+          <a href="https://line.me/R/ti/p/@223qfxaj" target="_blank" rel="noopener" class="foot-a">LINE</a>
+        </div>
+      </div>
+      <div class="foot-line">
+        <span class="foot-copy">&copy; 2026 菈菈網頁設計 Lara Design. All rights reserved.</span>
+        <span class="foot-copy">Sanmin Dist., Kaohsiung</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+<script src="assets/app.js?v=3"></script>
+<script>
+const FAQS = [
+  { q:'做一個網站要多久？', a:'我們導入 AI 輔助開發流程，一頁式官網最快約 1 週可交付，形象官網約 2 至 3 週；含後台或客製功能的專案依複雜度另行評估。確切時程會於規格書中載明。' },
+  { q:'我不懂技術，需要準備什麼？', a:'僅需準備網站文字與圖片素材（如品牌介紹、服務說明、照片），技術相關事項由我們處理。若文案尚未成形，訪談階段會協助梳理。' },
+  { q:'報價會不會做到一半被加價？', a:'不會。開工前雙方確認書面規格書，載明工作項目與金額。規格範圍內不追加費用；若需新增功能，將先行報價，經同意後才執行。' },
+  { q:'付款方式怎麼進行？', a:'一般專案於簽約後支付 50% 訂金開工，驗收上線後支付尾款 50%。維護月費可按月或年繳，年繳享有優惠。付款方式支援銀行轉帳。' },
+  { q:'網域和主機需要自己準備嗎？', a:'不需要，我們可協助代辦。網域與主機為第三方年費（網域約數百元／年，主機依規格而定），所有權登記在你名下，由我們協助設定與管理，日後即使更換廠商，資產仍是你的。' },
+  { q:'上線後我可以自己改內容嗎？', a:'可以。含後台的方案可自行更新文字、圖片與商品，交付時附操作教學。一頁式方案的後續調整，可採單次計費或納入維護方案。' },
+  { q:'網站之後壞了或被駭怎麼辦？', a:'維護方案客戶的系統更新、備份與問題排查皆包含在內，異常狀況優先處理。未訂閱維護方案亦可單次委託處理，惟建議營運型網站維持定期維護。' },
+  { q:'不在高雄也可以合作嗎？', a:'可以。需求訪談、進度確認與交付教學皆可透過線上會議進行，目前合作客戶不限地區。' },
+  { q:'與套版網站服務的差異是什麼？', a:'套版服務以低價見長，但通常不含 SEO 規劃、操作教學與後續支援。我們的服務針對個別商業需求設計，從客戶如何找到網站、瀏覽動線到轉換路徑皆經過規劃，並提供完整的交付文件與維護選項。' },
+];
+document.getElementById('faq-jsonld').textContent = JSON.stringify({
+  '@context':'https://schema.org','@type':'FAQPage',
+  'mainEntity': FAQS.map(f => ({ '@type':'Question','name':f.q,'acceptedAnswer':{ '@type':'Answer','text':f.a } })),
+});
+const { createApp, ref } = Vue;
+createApp({ setup(){ return { faqs:FAQS, open:ref(0) }; } }).mount('#app');
+</script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script>
+    document.documentElement.classList.add('js');
+    addEventListener('load', function () {
+      setTimeout(function () {
+        if (!window.__laraReveal) {
+          document.querySelectorAll('.rv').forEach(function (e) { e.classList.add('in'); });
+        }
+      }, 1500);
+    });
+  </script>
+
+  <title>作品集 | 菈菈網頁設計 — 高雄網頁設計・客製化系統</title>
+  <meta name="description" content="菈菈網頁設計的精選作品：形象官網、一頁式網站、電商系統、客製化後台與 LINE 官帳設計案例。" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lara-design.com/works.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="作品集 | 菈菈網頁設計" />
+  <meta property="og:description" content="形象官網、一頁式網站、電商系統、客製化後台與 LINE 官帳設計案例。" />
+  <meta property="og:locale" content="zh_TW" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="assets/styles.css?v=5" rel="stylesheet" />
+</head>
+<body>
+<div id="app" v-cloak>
+
+  <nav class="nav" aria-label="主要導覽">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="brand">菈菈網頁設計<span class="seal-dot"></span></a>
+      <div class="nav-links">
+        <a href="index.html#services" class="nav-a">服務範疇</a>
+        <a href="index.html#estimator" class="nav-a">報價試算</a>
+        <a href="index.html#plans" class="nav-a">方案價格</a>
+        <a href="works.html" class="nav-a cur">作品集</a>
+        <a href="faq.html" class="nav-a">常見問題</a>
+        <a href="index.html#contact" class="nav-cta">免費洽詢</a>
+      </div>
+      <button class="burger" aria-expanded="false" aria-label="選單"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mnav">
+    <a href="index.html#services">服務範疇</a>
+    <a href="index.html#estimator">報價試算</a>
+    <a href="index.html#plans">方案價格</a>
+    <a href="works.html">作品集</a>
+    <a href="faq.html">常見問題</a>
+    <a href="index.html#contact" class="nav-cta">免費洽詢</a>
+  </div>
+
+  <main>
+    <header class="page-hero">
+      <div class="wrap">
+        <span class="eyebrow">作品集</span>
+        <h1 class="page-h1">每個專案，<br />都是<span class="em">一次量身打造</span></h1>
+        <p class="page-sub">從形象官網到客製化系統，以下是我們近期完成的專案類型。每個案例皆從商業需求出發，兼顧設計、效能與後續維護性。</p>
+        <div class="filters" role="tablist" aria-label="作品分類篩選">
+          <button v-for="c in categories" :key="c" class="fchip" :class="{on: filter===c}" @click="filter=c" role="tab" :aria-selected="(filter===c).toString()">
+            {{ c }}<span class="cnt">{{ countOf(c) }}</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="sec" style="padding-top:2.5rem" aria-label="作品列表">
+      <div class="wrap">
+        <div class="wgrid">
+          <article v-for="w in filtered" :key="w.name" class="wcard rv in" :style="`--ac-soft:${w.soft}; --ac-mid:${w.mid};`">
+            <div class="wprev">
+              <div class="wframe">
+                <div class="wbar"><span class="wdot"></span><span class="wdot"></span><span class="wdot"></span><span class="wurl">{{ w.url }}</span></div>
+                <div class="wbody">
+                  <template v-if="w.variant==='site'">
+                    <div class="b-hero"><div class="b-l1"></div><div class="b-l2"></div></div>
+                    <div class="b-grid"><div class="b-cell" v-for="n in 3" :key="n"><div class="b-th"></div><div class="b-t1"></div><div class="b-t2"></div></div></div>
+                  </template>
+                  <template v-else-if="w.variant==='shop'">
+                    <div class="b-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:.5rem"><div class="b-cell" v-for="n in 4" :key="n"><div class="b-th" style="height:30px"></div><div class="b-t1"></div></div></div>
+                    <div class="b-grid" style="grid-template-columns:repeat(4,1fr)"><div class="b-cell" v-for="n in 4" :key="n"><div class="b-th" style="height:30px"></div><div class="b-t1"></div></div></div>
+                  </template>
+                  <template v-else-if="w.variant==='dash'">
+                    <div class="b-side">
+                      <div class="b-nav"><div class="b-ni on"></div><div class="b-ni"></div><div class="b-ni"></div><div class="b-ni"></div></div>
+                      <div><div class="b-chart"><div class="b-bar" v-for="(h,n) in [40,65,52,80,58,92,70]" :key="n" :style="`height:${h}%`"></div></div><div class="b-rows"><div class="b-row"></div><div class="b-row"></div><div class="b-row"></div></div></div>
+                    </div>
+                  </template>
+                  <template v-else-if="w.variant==='line'">
+                    <div class="b-chat"><div class="b-msg"></div><div class="b-msg me"></div><div class="b-msg" style="width:54%"></div></div>
+                    <div class="b-menu"><div class="b-mi" v-for="n in 6" :key="n"></div></div>
+                  </template>
+                </div>
+              </div>
+            </div>
+            <div class="winfo">
+              <span class="wtag">{{ w.cat }}</span>
+              <h3 class="wname">{{ w.name }}</h3>
+              <p class="wdesc">{{ w.desc }}</p>
+              <div class="wtech"><span v-for="t in w.tech" :key="t" class="wt">{{ t }}</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec-dark cta-band">
+      <div class="wrap">
+        <h2 class="rv">想看到你的專案<span class="em">出現在這裡</span>嗎？</h2>
+        <p class="rv d1">從一次需求訪談開始，兩個工作天內回覆。</p>
+        <a href="index.html#contact" class="btn btn-zhu rv d2">開始洽詢 <span class="arr">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot" aria-label="頁尾">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand-col">
+          <div class="foot-brand">菈菈網頁設計<span class="seal-dot"></span></div>
+          <p class="foot-blurb">官網建置、客製化系統、LINE 官帳設計，讓每個數位工具都替你帶來生意。</p>
+        </div>
+        <div>
+          <div class="foot-h">快速前往</div>
+          <a href="index.html#services" class="foot-a">服務範疇</a>
+          <a href="index.html#estimator" class="foot-a">報價試算</a>
+          <a href="index.html#plans" class="foot-a">方案價格</a>
+          <a href="works.html" class="foot-a">作品集</a>
+          <a href="faq.html" class="foot-a">常見問題</a>
+        </div>
+        <div>
+          <div class="foot-h">聯絡</div>
+          <a href="mailto:laradesign.tw@gmail.com" class="foot-a">Email</a>
+          <a href="https://line.me/R/ti/p/@223qfxaj" target="_blank" rel="noopener" class="foot-a">LINE</a>
+        </div>
+      </div>
+      <div class="foot-line">
+        <span class="foot-copy">&copy; 2026 菈菈網頁設計 Lara Design. All rights reserved.</span>
+        <span class="foot-copy">Sanmin Dist., Kaohsiung</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+<script src="assets/app.js?v=3"></script>
+<script>
+const { createApp, ref, computed } = Vue;
+createApp({
+  setup() {
+    const works = [
+      { name:'手作烘焙坊形象官網', cat:'形象官網', variant:'site', url:'bakery-demo.tw',
+        desc:'五頁式品牌官網，含品項介紹、門市資訊與節慶預購表單，搭配 SEO 全站設定。', tech:['Vue 3','RWD','SEO'], soft:'#F3E3D3', mid:'#D9A87C' },
+      { name:'攝影工作室一頁式', cat:'一頁式', variant:'site', url:'studio-demo.tw',
+        desc:'單頁完整呈現作品風格、方案價格與預約方式，行動裝置優先設計。', tech:['Vue 3','RWD','GA4'], soft:'#E3E6E3', mid:'#8FA396' },
+      { name:'選物店電商網站', cat:'電商系統', variant:'shop', url:'select-shop-demo.tw',
+        desc:'商品管理、購物車與綠界金流串接，含後台訂單管理與庫存提示。', tech:['ASP.NET Core','MSSQL','綠界金流'], soft:'#EBE2EE', mid:'#A98BB8' },
+      { name:'美容工作室預約系統', cat:'客製化系統', variant:'dash', url:'booking-demo.tw',
+        desc:'線上預約、時段管理與自動提醒通知，後台可檢視每日預約總覽。', tech:['Vue 3','C# MVC','LINE Notify'], soft:'#F4E4E1', mid:'#C98B82' },
+      { name:'進銷存管理後台', cat:'客製化系統', variant:'dash', url:'erp-demo.tw',
+        desc:'商品進出貨、庫存警示與報表匯出，依實際營運流程量身設計操作動線。', tech:['C# MVC','MSSQL','ClosedXML'], soft:'#DFE7EC', mid:'#7E9BAE' },
+      { name:'餐飲品牌 LINE 官帳', cat:'LINE 官帳', variant:'line', url:'LINE Official Account',
+        desc:'六格圖文選單、歡迎訊息與關鍵字自動回覆，將訂位與常見問題系統化處理。', tech:['LINE OA','圖文選單','自動回覆'], soft:'#E0EBD9', mid:'#8CAE7A' },
+    ];
+    const categories = ['全部','形象官網','一頁式','電商系統','客製化系統','LINE 官帳'];
+    const filter = ref('全部');
+    const filtered = computed(() => filter.value==='全部' ? works : works.filter(w=>w.cat===filter.value));
+    const countOf = (c) => c==='全部' ? works.length : works.filter(w=>w.cat===c).length;
+    return { works, categories, filter, filtered, countOf };
+  },
+}).mount('#app');
+</script>
+</body>
+</html>
